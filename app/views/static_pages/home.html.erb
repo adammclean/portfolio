@@ -1,2 +1,75 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js'></script>
+  <title></title>
+
+</head>
+<body>
+
+<section class="module parallax parallax-1">
+  <div class="container">
+    <h1>Portfolio Content 1</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor...</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-2">
+  <div class="container">
+    <h1>Portfolio Content 2</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor...</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-3">
+  <div class="container">
+    <h1>Portfolio Content 3</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor...</p>
+  </div>
+</section>
+
+<!-- These are the parallax functions; we select speed and background position. -->
+<script type="text/javascript">
+
+    (function(){
+
+        var parallax = document.querySelectorAll(".parallax"),
+                speed = .5;
+
+        window.onscroll = function(){
+            [].slice.call(parallax).forEach(function(el,i){
+
+                var windowYOffset = window.pageYOffset,
+                        elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+                el.style.backgroundPosition = elBackgrounPos;
+
+            });
+        };
+
+    })();
+</script>
+</body>
+</html>
+
+
